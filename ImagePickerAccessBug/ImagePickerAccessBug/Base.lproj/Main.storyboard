@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -34,18 +33,50 @@
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifE-3Z-TTx"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5y-pt-XhJ">
+                                <rect key="frame" x="372" y="146" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enable Workaround" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBp-2n-dF0">
+                                <rect key="frame" x="190" y="151" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App has access to Photo Library" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="P1y-5M-KDx">
+                                <rect key="frame" x="88" y="117" width="251" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-Wh-3YW">
+                                <rect key="frame" x="372" y="117" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sVb-os-WEE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1k4-Hw-7NY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NqG-Ig-Qga" secondAttribute="trailing" constant="84" id="4Ae-VA-3dG"/>
+                            <constraint firstItem="iBp-2n-dF0" firstAttribute="centerY" secondItem="j5y-pt-XhJ" secondAttribute="centerY" id="7RZ-pi-WhJ"/>
+                            <constraint firstItem="iBp-2n-dF0" firstAttribute="top" secondItem="P1y-5M-KDx" secondAttribute="bottom" constant="13" id="9Di-zf-KI2"/>
+                            <constraint firstItem="iBp-2n-dF0" firstAttribute="trailing" secondItem="P1y-5M-KDx" secondAttribute="trailing" id="9uy-0u-7JL"/>
                             <constraint firstItem="NqG-Ig-Qga" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q1s-g9-y7i"/>
+                            <constraint firstItem="8gh-Wh-3YW" firstAttribute="centerY" secondItem="P1y-5M-KDx" secondAttribute="centerY" id="QAU-EY-B0N"/>
+                            <constraint firstItem="j5y-pt-XhJ" firstAttribute="leading" secondItem="iBp-2n-dF0" secondAttribute="trailing" constant="33" id="RsK-yh-iRe"/>
+                            <constraint firstItem="sVb-os-WEE" firstAttribute="top" secondItem="iBp-2n-dF0" secondAttribute="bottom" constant="113" id="Y7j-IV-D9k"/>
+                            <constraint firstItem="P1y-5M-KDx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="YQK-T3-mBP"/>
                             <constraint firstItem="NqG-Ig-Qga" firstAttribute="leading" secondItem="sVb-os-WEE" secondAttribute="trailing" constant="33" id="ZBy-rw-9NA"/>
+                            <constraint firstItem="8gh-Wh-3YW" firstAttribute="leading" secondItem="P1y-5M-KDx" secondAttribute="trailing" constant="33" id="biY-L8-Wdm"/>
                             <constraint firstItem="NqG-Ig-Qga" firstAttribute="centerY" secondItem="sVb-os-WEE" secondAttribute="centerY" id="iqH-G8-BdF"/>
+                            <constraint firstItem="sVb-os-WEE" firstAttribute="trailing" secondItem="iBp-2n-dF0" secondAttribute="trailing" id="ja7-XE-akY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="photoLibraryAccessLabel" destination="8gh-Wh-3YW" id="11d-hh-jEP"/>
                         <outlet property="resultImage" destination="NqG-Ig-Qga" id="xry-pE-Db0"/>
+                        <outlet property="workaroundSwitch" destination="j5y-pt-XhJ" id="nVM-V3-7GC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

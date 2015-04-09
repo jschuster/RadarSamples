@@ -10,5 +10,8 @@
 
 @interface ViewController : UIViewController <UIPopoverControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
+@property (nonatomic, strong) IBOutlet UISwitch* workaroundSwitch;
+@property (nonatomic, strong) IBOutlet UILabel* photoLibraryAccessLabel;
+
 @end
 
